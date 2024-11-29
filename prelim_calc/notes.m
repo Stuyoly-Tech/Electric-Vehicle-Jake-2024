@@ -1,33 +1,27 @@
 clear; clc;
 
-# What quantity do we want to minimize?
-# Time of run
-# What speed to aim for?
-# What parameters do we want?
-# - We want required torque, rpm, etc
-# - We want optimal wheel radius
-# - Within limits of power supply
+g = 9.81
 
-# What is limiting our runtime?
-# - Mass
-# - Power supply (Max current, voltage)
-# - Normal force (max acceleration)
+m = 1.5; #0.142 + (28/1000)*8 + (0.011*4) + (0.0025*4);
+d = 10;
+t = 2;
+u_s = 0.7;
 
-# What are limits to acceleration?
-# - At most, we accelerate for half the distance (we need to slow down too)
-# - minimize jerk?
+a = (2*(d/2))/((t/2)^2);
+v_max = a*t;
 
-# What is a good time?
-# - sub 2
-# 10 meters under 2 seconds
-# 5 m/s minimum
-# 10 m under 1 seconds
-# 10 m/s minimum
+a_max = ((m/4)*g*u_s)/m
+f_n = m*a - (m/4)*g*u_s;
 
+r = 0.01 : 0.001 : 0.1;
 
+tau = [];
+w_max = [];
 
+for i = 1 : length(r)
+  tau(i) = m*a*r(i);
+  w_max(i) = v_max/(2*pi*r(i))
+endfor
 
-
-
-
+plot(r, [w_max; tau]);
 

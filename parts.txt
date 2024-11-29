@@ -1,0 +1,6 @@
+Motor: NEO 550
+Wheels: T81 Banebots 2" d
+Estimated Weight: Under 1.5kg
+^alone should do sub 5 seconds
+Extra downforce needed for sub 2
+13N
