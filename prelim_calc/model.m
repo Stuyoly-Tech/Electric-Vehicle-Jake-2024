@@ -7,6 +7,17 @@ function mass = radius_to_mass(r)
   mass = 3.11*r - 0.0487 + 0.00255;
 endfunction
 
+function plotgraphauto(x, y, x_l, y_l, c)
+  plot(x, y, c);
+  title(strjoin({x_l, "v.",y_l}, " "));
+  xlabel(x_l); ylabel(y_l);
+  #stepx = (max(x)-min(x))/10;
+  #stepy = (max(y)-min(y))/10
+  #xticks(min(x) - 2*stepx: stepx : max(x) + 2*stepx);
+  #yticks(min(y) - 2*stepy: stepy : max(y) + 2*stepy);
+  grid on;
+endfunction
+  
 # user defined constants
 t_run = 2; # Run time
 d_run = 10; # Run distance
@@ -32,22 +43,15 @@ for i = 1:length(r_w)
 endfor
 
 hf = figure();
-subplot(3, 1, 1);
-plot(rpm_w, torque_m, "m");
-title("RPM v. torque (Nm)");
-xlabel("RPM"); ylabel("torque (Nm)");
-xticks(0 : 500 : max(rpm_w) + 500); yticks(0 : 0.1 : max(torque_m) + 0.5);
-grid on;
-subplot(3, 1, 2);
-plot(r_w, power_m);
-title("radius (m) v. power (W)");
-xlabel("radius (m)"); ylabel("power (W)");
-xticks(0 : 0.01 : r_range(2)); yticks(0 : 5 : max(power_m) + 10);
-grid on;
-subplot(3, 1, 3);
-plot(r_w, rpm_w, "g");
-title("radius (m) v. RPM");
-xlabel("radius (m)"); ylabel("RPM");
-xticks(0 : 0.01 : r_range(2)); yticks(0 : 500 : max(rpm_w) + 500);
-grid on;
-
+subplot(3, 2, 1);
+plotgraphauto(r_w, torque_m, "Radius (m)", "Torque (Nm)", "r");
+subplot(3, 2, 2);
+plotgraphauto(r_w, rpm_w, "Radius (m)", "RPM", "b");
+subplot(3, 2, 3);
+plotgraphauto(r_w, power_m, "Radius (m)", "Power (Watts)", "g");
+subplot(3, 2, 4);
+plotgraphauto(rpm_w, torque_m, "RPM", "Torque (Nm)", "m");
+subplot(3, 2, 5);
+plotgraphauto(rpm_w, power_m, "RPM", "Power (Watts)", "c");
+subplot(3, 2, 6);
+plotgraphauto(torque_m, power_m, "Torque (Nm)", "Power (Watts)", "k");
