@@ -19,11 +19,11 @@ function plotgraphauto(x, y, x_l, y_l, c)
 endfunction
   
 # user defined constants
-t_run = 2; # Run time
+t_run = 1.7; # Run time
 d_run = 10; # Run distance
 m = 1; # Total car weight
 u_s = 0.7; # Coefficient of static friction between floor and wheel
-r_range = [0.0381/2, 0.1]; # Range of wheel radii to test
+r_range = [0.02, 0.1]; # Range of wheel radii to test
 
 a_min = (4*d_run)/(t_run^2);
 v_max = a_min*t_run/2;
@@ -55,3 +55,4 @@ subplot(3, 2, 5);
 plotgraphauto(rpm_w, power_m, "RPM", "Power (Watts)", "c");
 subplot(3, 2, 6);
 plotgraphauto(torque_m, power_m, "Torque (Nm)", "Power (Watts)", "k");
+printf("Extra downforce: %f N\n", f_normal_ext);
