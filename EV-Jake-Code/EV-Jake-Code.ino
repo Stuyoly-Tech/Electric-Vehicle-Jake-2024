@@ -12,7 +12,7 @@ int STATE;//for screen
 bool READY;
 
 //For increment menu
-double DELTA_X_OPTIONS[] = { 1, 0.25, 0.1, 0.01, 0.001 };
+double DELTA_X_OPTIONS[] = { 0.25, 0.1, 0.01, 0.001 };
 int DELTA_X_I;
 
 uint8_t BTN_PINS[] = { BTN0, BTN1, BTN2, BTN3, BTN4 };

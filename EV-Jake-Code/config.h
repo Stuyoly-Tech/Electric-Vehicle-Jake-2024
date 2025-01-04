@@ -31,5 +31,6 @@
 #define RUN_MENU 1
 #define DIST_MENU 2
 #define SPEED_MENU 3
-#define END_RUN 4
-#define RUNNING 5
+#define ACCEL_MENU 4
+#define END_RUN 5
+#define RUNNING 6
