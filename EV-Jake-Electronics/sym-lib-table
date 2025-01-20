@@ -7,4 +7,5 @@
   (lib (name "LSF0102")(type "KiCad")(uri "${KIPRJMOD}/Libraries/LSF0102/LSF0102.kicad_sym")(options "")(descr ""))
   (lib (name "NCP551")(type "KiCad")(uri "${KIPRJMOD}/Libraries/NCP551/NCP551.kicad_sym")(options "")(descr ""))
   (lib (name "LSF0104")(type "KiCad")(uri "${KIPRJMOD}/Libraries/LSF0104/LSF0104.kicad_sym")(options "")(descr ""))
+  (lib (name "laser")(type "KiCad")(uri "${KIPRJMOD}/Libraries/laser.kicad_sym")(options "")(descr ""))
 )
