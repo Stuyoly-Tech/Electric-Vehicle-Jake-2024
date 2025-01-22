@@ -11,4 +11,6 @@
   (lib (name "LM337T")(type "KiCad")(uri "/home/apatwekar70/Desktop/EV24/ev code fr this time/EVBuild/Libraries/LM337T/LM337T.kicad_sym")(options "")(descr ""))
   (lib (name "LM1117")(type "KiCad")(uri "${KIPRJMOD}/Libraries/LM1117/LM1117.kicad_sym")(options "")(descr ""))
   (lib (name "AMT10Enc")(type "KiCad")(uri "${KIPRJMOD}/Libraries/AMT10 Encoder/AMT10Enc.kicad_sym")(options "")(descr ""))
+  (lib (name "CP2102-GM")(type "KiCad")(uri "/home/apatwekar70/Desktop/RT24/Robot-Tour-Peter-2024/Electronics/Libraries/CP2102-GM/CP2102-GM.kicad_sym")(options "")(descr ""))
+  (lib (name "FUSB74")(type "KiCad")(uri "${KIPRJMOD}/Libraries/FUSB74/FSUSB74.kicad_sym")(options "")(descr ""))
 )
